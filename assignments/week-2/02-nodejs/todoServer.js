@@ -39,11 +39,101 @@
 
   Testing the server - run `npm run test-todoServer` command in terminal
  */
-  const express = require('express');
-  const bodyParser = require('body-parser');
-  
-  const app = express();
-  
-  app.use(bodyParser.json());
-  
-  module.exports = app;
+const express = require("express");
+const bodyParser = require("body-parser");
+
+const app = express();
+const todoJson = []
+app.use(bodyParser.json());
+
+app.get("/todos", (req, res) => {
+  console.log("todoJson", todoJson)
+  if (todoJson.length > 0) {
+    res.status(200).json(todoJson);
+  } else {
+    res.status(404).json({ msg: "No data found" });
+  }
+});
+
+app.get("/todos/:id", (req, res) => {
+  const id = parseInt(req.params.id)
+  if (!id) {
+    res.status(404).json({
+      msg: "No data found for the provided id",
+    });
+  }
+  const todo = todoJson.filter(({ id: todoId }) => todoId === id);
+  if (todo.length > 0) {
+    res.status(200).json(todo[0]);
+  } else {
+    res.status(404).json({
+      msg: "No data found for the provided id",
+    });
+  }
+});
+
+app.post("/todos", (req, res) => {
+  const id = todoJson.length + 1;
+  const {
+    title = "",
+    description = "",
+    completed = false,
+  } = req.body;
+  const newTodo = {
+    title,
+    completed,
+    description,
+    id,
+  }
+  todoJson.push(newTodo);
+  res.status(201).json(newTodo);
+});
+
+app.put("/todos/:id", (req, res) => {
+  const id = parseInt(req.params.id)
+  if (!id) {
+    res.status(404).json({
+      msg: "No data found for the provided id",
+    });
+  }
+  const body = req.body;
+  let updatedTodo = [...todoJson];
+  if (todoJson?.length > 0 && todoJson.some((todo) => todo.id === id)) {
+    updatedTodo.forEach((todo) => {
+      if (todo.id === id) {
+        return { ...todo, ...body };
+      } else {
+        return todo;
+      }
+    });
+    res.status(200).json(updatedTodo[id]);
+  } else {
+    res.status(404).json({
+      msg: "No data found for the provided id",
+    });
+  }
+});
+
+app.delete("/todos/:id", (req, res) => {
+  const id = parseInt(req.params.id)
+  if (!id) {
+    res.status(404).json({
+      msg: "No data found for the provided id",
+    });
+  }
+  const todoIndex = todoJson.findIndex(({ id: todoId }) => todoId === id);
+  if (todoIndex === -1) {
+    res.status(404).json({
+      msg: "No data found for the provided id",
+    });
+  } else {
+    todoJson.pop(todoIndex);
+    res.status(200).json(todoJson);
+  }
+});
+
+module.exports = app;
+
+// app.listen(3001, () => {
+//   console.log("todo server is listening to 3001")
+// })
