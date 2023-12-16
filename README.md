@@ -1,4 +1,4 @@
-### sagun-100xDevs-Cohort-2.0 Learning Journey Repository
+### sagun-learning-cohort Learning Journey Repository
 
 👋 Hello there! Welcome to my learning journey repository! My name is Sagun Saluja, and I'm thrilled to embark on this exciting journey of continuous growth and improvement in the world of software engineering.
 
