@@ -10,8 +10,7 @@
 
 ## Why This Repository?
 
-## [100xDevs-Cohort-2.0](https://100xdevs.com/new-courses/8-live-0-100-complete) from 0 - 100 🚀
-This repository serves as a documentation of my ongoing learning experiences, challenges, and victories. As I progress through the 100xDevs-Cohort-2.0 course by by [Harkirat Singh](https://www.linkedin.com/in/kirat-li/), I'm committed to sharing everything I learn with the community. Expect to find code snippets, project updates, and reflections on the skills and technologies I encounter.
+This repository serves as a documentation of my ongoing learning experiences, challenges, and victories. As I progress through the Full Stack Development at Lambton college and [100xDevs-Cohort-2.0](https://100xdevs.com/new-courses/8-live-0-100-complete) from 0 - 100 🚀 course by by [Harkirat Singh](https://www.linkedin.com/in/kirat-li/), I'm committed to sharing everything I learn with the community. Expect to find code snippets, project updates, and reflections on the skills and technologies I encounter.
 
 ![cohort](images/cohort.png)
 
