@@ -13,7 +13,7 @@
 ## [100xDevs-Cohort-2.0](https://100xdevs.com/new-courses/8-live-0-100-complete) from 0 - 100 🚀
 This repository serves as a documentation of my ongoing learning experiences, challenges, and victories. As I progress through the 100xDevs-Cohort-2.0 course by by [Harkirat Singh](https://www.linkedin.com/in/kirat-li/), I'm committed to sharing everything I learn with the community. Expect to find code snippets, project updates, and reflections on the skills and technologies I encounter.
 
-![cohort](image/cohort.png)
+![cohort](images/cohort.png)
 
 ## Goals
 
@@ -30,27 +30,27 @@ Feel free to navigate through the repository's folders and files to track my pro
 # Foundation
 
 1. Backend
-![foundations](image/foundations.png)
+![foundations](images/foundations.png)
 
 2. Frontend
-![frontend](image/frontend.png)
+![frontend](images/frontend.png)
 
 3. Devops
-![devops](image/devops.png)
+![devops](images/devops.png)
 
 4. Projects
-![projects](image/projects.png)
+![projects](images/projects.png)
 
 # Advance
 
 1. Backend and System Design
-![advancedbackend](image/advancedbackend.png)
+![advancedbackend](images/advancedbackend.png)
 
 2. Devops
-![advanceddevops](image/advanceddevops.png)
+![advanceddevops](images/advanceddevops.png)
 
 3. Projects
-![advancedprojects](image/advancedprojects.png)
+![advancedprojects](images/advancedprojects.png)
 
 Your feedback, suggestions, and collaboration are highly encouraged. Let's learn and grow together! 🚀
 
