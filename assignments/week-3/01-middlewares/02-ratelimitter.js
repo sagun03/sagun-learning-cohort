@@ -16,6 +16,15 @@ setInterval(() => {
     numberOfRequestsForUser = {};
 }, 1000)
 
+const rateLimit = (req, res, next) => {
+  if (Object.keys(numberOfRequestsForUser).length < 5) {
+    numberOfRequestsForUser[req.header.user-id] = new Date()
+    next()
+  } else {
+    res.status(404)
+  }
+}
+app.use(rateLimit)
 app.get('/user', function(req, res) {
   res.status(200).json({ name: 'john' });
 });
